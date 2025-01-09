@@ -1,0 +1,104 @@
+/* pages/stats/stats.wxss */
+.stats-header {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.update-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.stats-content {
+  background: #fff;
+  padding: 40rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.stats-value {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #1296db;
+  margin-bottom: 10rpx;
+}
+
+.stats-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.tips {
+  text-align: center;
+  padding: 30rpx;
+}
+
+.tips-text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  padding: 30rpx 20rpx 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-title {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.card-number {
+  font-size: 48rpx;
+  color: #1296db;
+  font-weight: bold;
+}
+
+.game-section {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  grid-column: span 2;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-text {
+  font-size: 28rpx;
+  color: #666;
+}

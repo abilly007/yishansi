@@ -1,0 +1,176 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  padding: 30rpx 20rpx 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-title {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.card-number {
+  font-size: 48rpx;
+  color: #1296db;
+  font-weight: bold;
+}
+
+.game-section {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.game-text {
+  margin: 40rpx 20rpx;
+  padding: 40rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.game-text text {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx;
+  margin-left: 38rpx;
+  margin-right: 43rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 100rpx;
+  left: 0rpx;
+  right: 0rpx;
+  background: #fff;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 12rpx;
+}
+
+.btn {
+  min-width: 240rpx;
+  max-width: 240rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.work {
+  background: #4CAF50;
+}
+
+.pray {
+  background: #ff6b81;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.container {
+  padding-bottom: 248rpx;
+}
+
+.rules-container {
+  margin: 20rpx;
+  padding: 40rpx;
+  background: #000;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.2);
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-scroll {
+  color: #FFE81F;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.rules-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 4rpx;
+  color: #FFE81F;
+  text-align: center;
+}
+
+.rules-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+  padding: 20rpx 0;
+}
+
+.rules-content text {
+  font-size: 32rpx;
+  line-height: 1.6;
+  text-align: left;
+  font-family: monospace;
+  letter-spacing: 2rpx;
+}
+
+.rules-content text:first-child {
+  color: #FF0000;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+}

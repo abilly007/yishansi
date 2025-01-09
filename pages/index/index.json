@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "game-modal": "../../components/game-modal/index",
+    "win-notice": "../../components/win-notice/index"
+  }
+}

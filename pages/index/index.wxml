@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container" style="padding-bottom: 148rpx;">
+    <game-modal 
+      visible="{{showModal}}" 
+      bind:close="handleModalClose"
+      bind:pay-success="handlePaySuccess"
+    />
+    <win-notice
+      visible="{{showWinNotice}}"
+      winner="{{winner}}"
+      bind:close="handleWinNoticeClose"
+    />
+    <view class="rules-container">
+      <text class="rules-title">游戏规则说明</text>
+      <scroll-view class="rules-scroll" scroll-y>
+        <view class="rules-content">
+          <text>WARNING</text>
+          <text>本游戏纯属娱乐，请理性参与</text>
+          <text>1. 选择上香进行游戏，支付金额进入奖池</text>
+          <text>2. 当奖池金额达到开奖金额时自动开奖</text>
+          <text>3. 系统随机选择一名幸运用户获得奖池金额</text>
+          <text>4. 中奖金额将自动存入用户钱包</text>
+          <text>5. 每轮游戏结束后开启新一轮</text>
+          <text>6. 选择上班则收获一天的安稳</text>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="game-text">
+      <text>年轻人在上班和上进之间</text>
+      <text>选择了上香</text>
+      <text>中年人在躺平和躺赢之间</text>
+      <text>选择了先上香再上班</text>
+    </view>
+
+    <view class="game-buttons">
+      <button class="btn pray" bindtap="handlePray">上香</button>
+      <button class="btn work" bindtap="handleWork">上班</button>
+    </view>
+  </view>
+</scroll-view>

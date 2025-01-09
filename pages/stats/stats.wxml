@@ -1,0 +1,27 @@
+<!--pages/stats/stats.wxml-->
+<view class="container">
+  <view class="stats-cards">
+    <view class="card">
+      <text class="card-title">在线用户</text>
+      <text class="card-number">{{onlineUsers}}</text>
+    </view>
+    <view class="card">
+      <text class="card-title">总用户数</text>
+      <text class="card-number">{{totalUsers}}</text>
+    </view>
+    <view class="card">
+      <text class="card-title">奖池金额</text>
+      <text class="card-number">{{prizeMoney}}元</text>
+    </view>
+    <view class="card">
+      <text class="card-title">开奖金额</text>
+      <text class="card-number">{{brokenMoney}}元</text>
+    </view>
+    <view class="game-section">
+      <view class="game-info">
+        <text class="info-text">参与人数：{{players}}人</text>
+        <text class="info-text">{{isBreaking ? '正在开奖中...' : '等待开奖中'}}</text>
+      </view>
+    </view>
+  </view>
+</view>

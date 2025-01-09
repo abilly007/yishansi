@@ -1,0 +1,30 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <view class="user-info">
+    <view class="avatar-wrapper" bindtap="handleLogin">
+      <image class="avatar" src="{{hasUserInfo ? userInfo.avatarUrl : '/images/avatar.png'}}" mode="aspectFill"></image>
+    </view>
+    <text class="nickname">{{hasUserInfo ? userInfo.nickName : '点击头像登录'}}</text>
+    <view class="wallet" wx:if="{{hasUserInfo}}">
+      <text class="balance">余额：{{balance}}元</text>
+      <view class="wallet-btns">
+        <button class="btn" size="mini" bindtap="handleRecharge">充值</button>
+        <button class="btn" size="mini" bindtap="handleWithdraw">提现</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="menu-list">
+    <view class="menu-item">
+      <text class="menu-text">关于我们</text>
+      <text class="arrow">></text>
+    </view>
+    <view class="menu-item">
+      <text class="menu-text">联系客服</text>
+      <text class="arrow">></text>
+    </view>
+    <view class="menu-item" wx:if="{{hasUserInfo}}" bindtap="handleLogout">
+      <text class="menu-text logout">退出登录</text>
+    </view>
+  </view>
+</view>

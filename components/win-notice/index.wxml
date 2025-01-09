@@ -1,0 +1,24 @@
+<view class="notice {{visible ? 'show' : ''}}" wx:if="{{visible}}">
+  <view class="notice-mask" bindtap="handleClose"></view>
+  <view class="notice-content">
+    <view class="notice-header">
+      <text class="notice-title">🎉 恭喜中奖 🎉</text>
+    </view>
+    <view class="notice-body">
+      <view class="winner-info">
+        <image class="winner-avatar" src="{{winner.avatarUrl}}" mode="aspectFill"></image>
+        <text class="winner-name">{{winner.nickName}}</text>
+      </view>
+      <view class="prize-info">
+        <text class="prize-amount">获得奖金：{{winner.amount}}元</text>
+      </view>
+      <view class="notice-tips">
+        <text>奖金已自动存入用户钱包</text>
+        <text>新一轮游戏即将开始</text>
+      </view>
+    </view>
+    <view class="notice-footer">
+      <button class="close-btn" bindtap="handleClose">我知道了</button>
+    </view>
+  </view>
+</view> 

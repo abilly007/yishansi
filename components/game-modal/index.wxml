@@ -1,0 +1,22 @@
+<view class="modal {{visible ? 'show' : ''}}" wx:if="{{visible}}">
+  <view class="modal-mask" bindtap="handleClose"></view>
+  <view class="modal-content">
+    <view class="modal-header">
+      <text class="modal-title">选择上香金额</text>
+      <text class="modal-close" bindtap="handleClose">×</text>
+    </view>
+    <view class="modal-body">
+      <view class="amount-grid">
+        <view 
+          class="amount-item" 
+          wx:for="{{amounts}}" 
+          wx:key="*this"
+          data-amount="{{item}}"
+          bindtap="handlePay"
+        >
+          {{item}}元
+        </view>
+      </view>
+    </view>
+  </view>
+</view> 
