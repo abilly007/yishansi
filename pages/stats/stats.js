@@ -22,7 +22,28 @@ Page({
     this.getStatsData()
     this.updateStats()
     // 监听数据更新
-    this.watchStats()
+    const db = wx.cloud.database()
+    db.collection('statistics').doc('total').watch({
+      onChange: (snapshot) => {
+        if (snapshot.type === 'init' || snapshot.type === 'update') {
+          const data = snapshot.docs[0]
+          console.log('统计数据更新:', data)
+          this.setData({
+            onlineUsers: data.onlineUsers,
+            totalUsers: data.totalUsers,
+            prizeMoney: data.prize_money,
+            brokenMoney: data.broken_money,
+            players: data.players,
+            isBreaking: data.is_breaking
+          })
+        }
+      },
+      onError: (err) => {
+        console.error('监听数据失败', err)
+        // 监听失败时重新获取数据
+        this.getStatsData()
+      }
+    })
   },
 
   /**

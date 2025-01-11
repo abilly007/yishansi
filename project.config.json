@@ -39,7 +39,7 @@
     "ignoreUploadUnusedFiles": false
   },
   "appid": "wx247167e0f13908ab",
-  "projectname": "你的项目名",
+  "projectname": "yishansi",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {},

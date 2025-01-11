@@ -53,14 +53,22 @@ exports.main = async (event, context) => {
 
     // 3. 更新奖池金额和参与人数
     try {
+      // 先获取当前统计数据
+      const { data: stats } = await db.collection('statistics').doc('total').get()
+      console.log('当前统计数据:', stats)
+
       await db.collection('statistics').doc('total').update({
         data: {
           prize_money: _.inc(amount),
-          players: _.inc(1),
+          players: stats.players + (user.pay === 0 ? 1 : 0),  // 只有首次支付才增加参与人数
           updateTime: db.serverDate()
         }
       })
       console.log('统计数据更新成功')
+
+      // 再次确认更新结果
+      const { data: updatedStats } = await db.collection('statistics').doc('total').get()
+      console.log('更新后的统计数据:', updatedStats)
     } catch (statsErr) {
       console.error('统计数据更新失败:', statsErr)
       throw statsErr
